@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EntryCell" customModule="Dictionary" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" rowHeight="162" id="PvF-JZ-TWv" customClass="EntryCell" customModule="Dictionary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="530" height="186"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PvF-JZ-TWv" id="2Vo-OY-T1o">
+                <rect key="frame" x="0.0" y="0.0" width="530" height="186"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-RG-T2M">
+                        <rect key="frame" x="8" y="12" width="514" height="162"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Word Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzc-XO-nxC">
+                                <rect key="frame" x="8" y="8.0000000000000018" width="498" height="29.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="/bad/" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-dV-uN5">
+                                <rect key="frame" x="8" y="39.666666666666664" width="498" height="16"/>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qSn-BX-kDo">
+                                <rect key="frame" x="8" y="57.666666666666671" width="498" height="50"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tns-7q-A6H">
+                                <rect key="frame" x="8" y="109.66666666666667" width="498" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="wlY-IT-NXU"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4s-gh-4zm">
+                                <rect key="frame" x="8" y="119.66666666666664" width="498" height="34.333333333333329"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtA-pw-oHi">
+                                        <rect key="frame" x="0.0" y="0.0" width="498" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="volume.1.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="soundTapped:" destination="PvF-JZ-TWv" eventType="touchUpInside" id="mjy-n2-zjm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eRS-RG-T2M" firstAttribute="leading" secondItem="2Vo-OY-T1o" secondAttribute="leading" constant="8" id="GG0-ld-72I"/>
+                    <constraint firstItem="eRS-RG-T2M" firstAttribute="top" secondItem="2Vo-OY-T1o" secondAttribute="top" constant="12" id="XdO-mN-ljO"/>
+                    <constraint firstAttribute="trailing" secondItem="eRS-RG-T2M" secondAttribute="trailing" constant="8" id="iz2-M2-fU8"/>
+                    <constraint firstAttribute="bottom" secondItem="eRS-RG-T2M" secondAttribute="bottom" constant="12" id="nRo-jk-C1O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="meaningStackView" destination="qSn-BX-kDo" id="mft-0z-ZlE"/>
+                <outlet property="phoneticLabel" destination="EKs-dV-uN5" id="Nu7-Ai-lk6"/>
+                <outlet property="spacerView" destination="Tns-7q-A6H" id="G4A-0U-bhs"/>
+                <outlet property="stackView" destination="eRS-RG-T2M" id="zNh-RL-9Aa"/>
+                <outlet property="titleLabel" destination="nzc-XO-nxC" id="dzz-Vr-Iap"/>
+            </connections>
+            <point key="canvasLocation" x="764.8854961832061" y="-188.02816901408451"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="volume.1.fill" catalog="system" width="128" height="104"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
